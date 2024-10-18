@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Bookstore</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <div class="auth-container" id="authContainer">
+            <div class="auth-box">
+                <h1 class="welcome-text">Welcome to Book Store</h1>
+                <div id="loginForm" class="authForm">
+                    <h3>Login</h3>
+                    <input type="text" id="loginUsername" placeholder="Username" required>
+                    <input type="password" id="loginPassword" placeholder="Password" required>
+                    <button id="loginButton">Login</button>
+                </div>
+            </div>
+        </div>
+        <div id="loggedInContent" style="display:none;">
+            <aside class="sidebar">
+                <h2>Book Store</h2>
+                <nav>
+                    <button id="listBtn">List</button>
+                    <button id="purchaseBtn">Purchase</button>
+                    <button id="orderHistoryBtn">Order History</button>
+                </nav>
+            </aside>
+            <div class="content-wrapper">
+                <h1 class="page-title">Welcome to the Book Store</h1>
+                <section class="book-list" id="bookList">
+                    <h2>Available Books</h2>
+                    <div id="books">
+                        <!-- JavaScript will dynamically load books here -->
+                    </div>
+                </section>
+                <section class="cart" id="cartSection" style="display:none;">
+                    <h2>Your Cart</h2>
+                    <ul id="cart-items">
+                        <!-- Cart items will be displayed here -->
+                    </ul>
+                    <p>Total: $<span id="total">0.00</span></p>
+                    <button id="checkout">Checkout</button>
+                </section>
+                <section class="order-history" id="orderHistory" style="display:none;">
+                    <h2>Your Orders</h2>
+                    <ul id="orders"></ul>
+                </section>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
